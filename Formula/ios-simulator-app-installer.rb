@@ -1,8 +1,8 @@
 class IosSimulatorAppInstaller < Formula
   homepage ""
-  url "https://github.com/stepanhruda/ios-simulator-app-installer/archive/v0.1.0.tar.gz"
-  version "0.1.0"
-  sha256 "1ac7e3fb49cd9c8e51add824360d8b6239a1e6d604338e55bb897ee1da5fe61b"
+  url "https://github.com/stepanhruda/ios-simulator-app-installer/archive/v0.1.1.tar.gz"
+  version "0.1.1"
+  sha256 "d80decd44cc62ec87f3c30d93a620924c838a608383976feab404d9d28606cab"
 
   def install
     system "./build.sh"
