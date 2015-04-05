@@ -1,16 +1,19 @@
 class IosSimulatorAppInstaller < Formula
-  homepage ""
-  url "https://github.com/stepanhruda/ios-simulator-app-installer/archive/v0.1.2.tar.gz"
-  version "0.1.2"
-  sha256 "9f9f144fbc387f79e9e23774febb9177941a6c469031f1c843154c6df48e6fcf"
+  homepage "https://github.com/stepanhruda/ios-simulator-app-installer"
+  url "https://github.com/stepanhruda/ios-simulator-app-installer/archive/v0.1.3.tar.gz"
+  version "0.1.3"
+  sha256 "3c10f7489b345a0846bc1220c3515a38b6e4e5a7c992aa63ea737291b8322cad"
+
+  depends_on :xcode => "6.2"
+  depends_on :macos => :mavericks
 
   def install
-    system "./build.sh"
+    system "make"
     bin.install "ios-simulator-app-installer"
     share.install "app-package-launcher"
-    prefix.install "LICENSE", "README.md"
   end
 
   test do
+    system "make"
   end
 end
